@@ -50,6 +50,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,
 .btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.25)}
 .btn-o{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.45);color:#fff;padding:13px 28px;border-radius:10px;text-decoration:none;font-weight:500;font-size:.92rem;transition:background .2s}
 .btn-o:hover{background:rgba(255,255,255,.2)}
+.hero-courses-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;opacity:.72;margin-bottom:12px;font-weight:600}
+.hero-courses{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:32px}
+.course-pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.26);padding:6px 14px;border-radius:50px;font-size:.76rem;font-weight:500;color:#fff;backdrop-filter:blur(6px)}
 /* STATS */
 .stats-row{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;box-shadow:0 8px 32px rgba(0,0,0,.1);position:relative;z-index:10}
 .stat{padding:24px 16px;text-align:center;border-right:1px solid #f1f5f9}
@@ -67,11 +70,18 @@ section{padding:72px 5vw}
 .about-wrap{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
 @media(min-width:768px){.about-wrap{grid-template-columns:1fr 1fr}}
 .about-img-wrap{border-radius:20px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.1)}
-.about-img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.about-img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 20%;display:block}
 .about-text p{color:#475569;line-height:1.84;margin-bottom:13px;font-size:.93rem;font-weight:400}
+.about-role{color:#1A3C6E;font-weight:600;font-size:.86rem;margin-bottom:16px}
 .hl-list{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:8px}
 .hl-list li{padding:10px 14px 10px 36px;position:relative;background:#f8fafc;border-radius:8px;color:#334155;font-size:.87rem;border-left:3px solid #E8F0FE}
 .hl-list li:before{content:'✓';color:#E8F0FE;position:absolute;left:12px;font-weight:700}
+.focus-label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#94a3b8;margin-top:22px;margin-bottom:10px}
+.focus-pills{display:flex;flex-wrap:wrap;gap:8px}
+.focus-pill{background:#1A3C6E14;color:#1A3C6E;padding:7px 14px;border-radius:50px;font-size:.8rem;font-weight:600}
+.approach-strip{margin-top:20px;padding:16px 18px;background:#f8fafc;border-radius:10px;border-left:3px solid #F4A900;color:#0f172a;font-size:.92rem;font-weight:700}
+.approach-strip span{font-weight:800;text-transform:uppercase;font-size:.68rem;letter-spacing:.08em;color:#F4A900;display:block;margin-bottom:4px}
+.about-objective{margin-top:14px;color:#475569;font-style:italic;font-size:.88rem;line-height:1.7}
 /* SERVICES */
 .svc-bg{background:#f8fafc}
 .svc-grid{display:grid;grid-template-columns:1fr;gap:18px}
@@ -134,12 +144,22 @@ footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-
   <div class="hero-bg" id="hp"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <div class="hero-chip">⭐ 5/5 &nbsp;·&nbsp; Google Verified</div>
-    <h1>Power Your Future with Industrial Automation Skills</h1>
-    <p>SK Automation Academy in Tambaram offers hands-on training programs designed to launch your career in the booming automation and industrial technology sector.</p>
+    <div class="hero-chip">SK Automation Academy</div>
+    <h1>Master Playwright Automation with Python, JavaScript &amp; TypeScript</h1>
+    <p>Learn Web Automation, API Testing, Framework Development, CI/CD Integration and AI-assisted Test Automation through practical, real-time project training.</p>
+    <p class="hero-courses-label">Courses Available</p>
+    <div class="hero-courses">
+      <span class="course-pill">Playwright with Python</span>
+      <span class="course-pill">Playwright with JavaScript</span>
+      <span class="course-pill">Playwright with TypeScript</span>
+      <span class="course-pill">API Testing</span>
+      <span class="course-pill">CI/CD Pipeline Integration</span>
+      <span class="course-pill">AI &amp; LLM-assisted Test Automation</span>
+    </div>
     <div class="hero-btns">
-      <a href="https://wa.me/919620385566?text=Hello!%20I%20found%20SK%20Automation%20Academy%20online%20and%20I'm%20interested%20in%20learning%20more%20about%20your%20automation%20training%20courses.%20Could%20you%20please%20share%20details%20about%20upcoming%20batches%2C%20fees%2C%20and%20course%20duration%3F" class="btn-p">Enroll Now &amp; Start Your Automation Career</a>
-      <a href="tel:096203 85566" class="btn-o">📞 Call Us</a>
+      <a href="#services" class="btn-p">Explore Courses</a>
+      <a href="tel:096203 85566" class="btn-o">Contact Trainer</a>
+      <a href="https://wa.me/919620385566?text=Hello!%20I%20found%20SK%20Automation%20Academy%20online%20and%20I'm%20interested%20in%20learning%20more%20about%20your%20Playwright%20automation%20training%20courses.%20Could%20you%20please%20share%20details%20about%20upcoming%20batches%2C%20fees%2C%20and%20course%20duration%3F" class="btn-o">Join the Course</a>
     </div>
   </div>
 </div>
@@ -154,19 +174,35 @@ footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-
   <div class="container">
     <div class="about-wrap">
       <div class="about-img-wrap" data-r>
-        <img src="./img/photo-0.jpg" alt="SK Automation Academy" class="about-img" loading="lazy" onerror="this.src='./img/photo-0.jpg'">
+        <img src="./pho.jpeg" alt="Selva Kumar - Automation Mentor &amp; Trainer" class="about-img" loading="lazy">
       </div>
       <div data-r data-d="2">
-        <p class="sec-eyebrow">About Us</p>
-        <h2 class="sec-h2">SK Automation Academy</h2>
-        <p class="about-text">SK Automation Academy is a premier technical training institution located in the heart of Sembakkam, Tambaram, Tamil Nadu. We are dedicated to equipping students, engineers, and working professionals with industry-relevant skills in automation, PLC programming, SCADA, electrical systems, and more. Our practical, job-oriented curriculum bridges the gap between academic knowledge and real-world industrial requirements.</p><p class="about-text">Founded with a passion for technical excellence, our academy operates six days a week with flexible morning and evening batches to accommodate working professionals and students alike. With experienced faculty, state-of-the-art lab facilities, and strong industry connections, SK Automation Academy has become a trusted name for automation education in the Tambaram and greater Chennai region. We are committed to transforming every student into a confident, job-ready professional.</p>
-        <ul class="hl-list"><li>Flexible batch timings from 6:00 AM to 9:00 PM to suit students and working professionals</li><li>Industry-experienced trainers with real-world automation project expertise</li><li>Hands-on lab training with live industrial equipment and software tools</li></ul>
+        <p class="sec-eyebrow">About the Trainer</p>
+        <h2 class="sec-h2">Selva Kumar</h2>
+        <p class="about-role">Automation Manager · Capgemini, Chennai · Automation Mentor &amp; Trainer</p>
+        <p class="about-text">I am Selva Kumar, currently working as an Automation Manager at Capgemini, Chennai, with hands-on experience in automation engineering and mentoring automation resources.</p>
+        <p class="about-text">Along with my professional responsibilities, I mentor and train new resources in automation, helping them understand automation concepts, framework development, real-time project practices and industry-oriented testing approaches.</p>
+        <p class="focus-label">Training Focus</p>
+        <div class="focus-pills">
+          <span class="focus-pill">Playwright Automation</span>
+          <span class="focus-pill">Python Automation</span>
+          <span class="focus-pill">JavaScript Automation</span>
+          <span class="focus-pill">TypeScript Automation</span>
+          <span class="focus-pill">API Testing</span>
+          <span class="focus-pill">Automation Framework Development</span>
+          <span class="focus-pill">CI/CD Integration</span>
+          <span class="focus-pill">AI &amp; LLM-assisted Automation</span>
+          <span class="focus-pill">Real-time Project Practices</span>
+          <span class="focus-pill">Automation Best Practices</span>
+        </div>
+        <div class="approach-strip"><span>Trainer Approach</span>Learn &rarr; Practice &rarr; Build &rarr; Integrate &rarr; Automate</div>
+        <p class="about-objective">The objective is not just to teach syntax, but to help learners understand how automation is designed and implemented in real-world projects.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="svc-bg">
+<section class="svc-bg" id="services">
   <div class="container">
     <div class="sec-center" data-r>
       <p class="sec-eyebrow">What We Offer</p>
