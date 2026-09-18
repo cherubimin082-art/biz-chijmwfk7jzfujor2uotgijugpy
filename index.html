@@ -129,6 +129,36 @@ section{padding:72px 5vw}
 .btn-cta-w{background:#fff;color:#1A3C6E;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:.9rem;display:inline-block;transition:transform .15s}
 .btn-cta-w:hover{transform:translateY(-2px)}
 .btn-cta-o{border:1.5px solid rgba(255,255,255,.4);color:#fff;padding:12px 26px;border-radius:10px;text-decoration:none;font-size:.9rem;display:inline-block;margin-top:8px}
+/* COURSE DETAILS */
+.courses-bg{background:#f8fafc}
+.course-intro{color:#64748b;font-size:.92rem;line-height:1.7;max-width:640px;margin:0 auto 28px;text-align:center}
+.course-tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:36px}
+.course-tab{background:#fff;border:1.5px solid #e2e8f0;color:#475569;padding:10px 18px;border-radius:50px;font-size:.84rem;font-weight:600;cursor:pointer;transition:background .2s,color .2s,border-color .2s;font-family:inherit}
+.course-tab.active{background:#1A3C6E;border-color:#1A3C6E;color:#fff}
+.course-panel{display:none}
+.course-panel.active{display:block}
+.module-acc{display:flex;flex-direction:column;gap:10px;max-width:820px;margin:0 auto}
+.module-item{background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.module-head{width:100%;text-align:left;background:none;border:none;padding:16px 20px;font-family:inherit;font-size:.92rem;font-weight:700;color:#0f172a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.module-head:after{content:'+';font-size:1.2rem;font-weight:400;color:#94a3b8;flex-shrink:0;transition:transform .2s}
+.module-item.open .module-head:after{transform:rotate(45deg)}
+.module-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.module-item.open .module-body{max-height:700px}
+.module-body-in{padding:0 20px 18px;display:flex;flex-wrap:wrap;gap:7px}
+.topic-pill{background:#1A3C6E0f;color:#1A3C6E;padding:5px 12px;border-radius:50px;font-size:.76rem;font-weight:600}
+.module-body-text{padding:0 20px 18px;color:#475569;font-size:.87rem;line-height:1.7}
+.flow-strip{margin:0 20px 18px;padding:12px 14px;background:#f8fafc;border-radius:8px;font-size:.8rem;font-weight:700;color:#1A3C6E;letter-spacing:.01em;border-left:3px solid #F4A900}
+.tool-badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:20px 0 28px}
+.tool-badge{background:#1A3C6E;color:#fff;padding:7px 16px;border-radius:8px;font-size:.8rem;font-weight:700}
+.pipeline-grid{display:grid;grid-template-columns:1fr;gap:14px;max-width:820px;margin:0 auto}
+@media(min-width:640px){.pipeline-grid{grid-template-columns:1fr 1fr}}
+.pipeline-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px}
+.pipeline-card h4{font-size:.88rem;font-weight:800;color:#0f172a;margin-bottom:8px}
+.pipeline-card p{font-size:.8rem;color:#1A3C6E;font-weight:700;line-height:1.6}
+.ai-topic-grid{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:820px;margin:0 auto}
+.ai-callout{max-width:720px;margin:28px auto 0;background:linear-gradient(135deg,#1A3C6E 0%,#F4A900 100%);border-radius:16px;padding:28px 30px;color:#fff;text-align:center}
+.ai-callout .eq{font-size:1.05rem;font-weight:800;margin-bottom:10px;letter-spacing:-.01em}
+.ai-callout p{font-size:.86rem;opacity:.9;line-height:1.65}
 /* FOOTER */
 footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-size:.8rem}
 .footer-brand{color:#64748b;font-weight:700;font-size:.88rem;margin-bottom:6px}
@@ -157,7 +187,7 @@ footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-
       <span class="course-pill">AI &amp; LLM-assisted Test Automation</span>
     </div>
     <div class="hero-btns">
-      <a href="#services" class="btn-p">Explore Courses</a>
+      <a href="#courses" class="btn-p">Explore Courses</a>
       <a href="tel:096203 85566" class="btn-o">Contact Trainer</a>
       <a href="https://wa.me/919620385566?text=Hello!%20I%20found%20SK%20Automation%20Academy%20online%20and%20I'm%20interested%20in%20learning%20more%20about%20your%20Playwright%20automation%20training%20courses.%20Could%20you%20please%20share%20details%20about%20upcoming%20batches%2C%20fees%2C%20and%20course%20duration%3F" class="btn-o">Join the Course</a>
     </div>
@@ -197,6 +227,98 @@ footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-
         </div>
         <div class="approach-strip"><span>Trainer Approach</span>Learn &rarr; Practice &rarr; Build &rarr; Integrate &rarr; Automate</div>
         <p class="about-objective">The objective is not just to teach syntax, but to help learners understand how automation is designed and implemented in real-world projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="courses-bg" id="courses">
+  <div class="container">
+    <div class="sec-center" data-r>
+      <p class="sec-eyebrow">Curriculum</p>
+      <h2 class="sec-h2">Course Details</h2>
+      <p class="sec-sub">Six structured tracks, from fundamentals to real-time projects</p>
+    </div>
+
+    <div class="course-tabs" data-r>
+      <button class="course-tab active" data-course="py">Playwright with Python</button>
+      <button class="course-tab" data-course="js">Playwright with JavaScript</button>
+      <button class="course-tab" data-course="ts">Playwright with TypeScript</button>
+      <button class="course-tab" data-course="api">API Testing</button>
+      <button class="course-tab" data-course="cicd">CI/CD Integration</button>
+      <button class="course-tab" data-course="ai">AI &amp; LLM-Assisted Automation</button>
+    </div>
+
+    <!-- Playwright with Python -->
+    <div class="course-panel active" id="course-py" data-r>
+      <div class="module-acc">
+        <div class="module-item open"><button class="module-head">Module 1 &mdash; Python Fundamentals for Automation</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">Python introduction</span><span class="topic-pill">Installation and environment setup</span><span class="topic-pill">Variables</span><span class="topic-pill">Data Types</span><span class="topic-pill">Operators</span><span class="topic-pill">Conditional Statements</span><span class="topic-pill">Loops</span><span class="topic-pill">Functions</span><span class="topic-pill">Lists</span><span class="topic-pill">Tuples</span><span class="topic-pill">Sets</span><span class="topic-pill">Dictionaries</span><span class="topic-pill">String handling</span><span class="topic-pill">Exception handling</span><span class="topic-pill">File handling</span><span class="topic-pill">Modules and packages</span><span class="topic-pill">Object-Oriented Programming basics</span></div></div></div>
+        <div class="module-item"><button class="module-head">Module 2 &mdash; Python Environment Setup</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">Install Python</span><span class="topic-pill">Configure Python environment</span><span class="topic-pill">Install VS Code</span><span class="topic-pill">Create project</span><span class="topic-pill">Create virtual environment</span><span class="topic-pill">Install Playwright</span><span class="topic-pill">Install browser binaries</span><span class="topic-pill">Configure project</span><span class="topic-pill">Execute first Playwright script</span></div></div></div>
+        <div class="module-item"><button class="module-head">Module 3 &mdash; Playwright Fundamentals</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">Introduction to Playwright</span><span class="topic-pill">Playwright architecture</span><span class="topic-pill">Browser</span><span class="topic-pill">Browser Context</span><span class="topic-pill">Page</span><span class="topic-pill">Locators</span><span class="topic-pill">Selectors</span><span class="topic-pill">Actions</span><span class="topic-pill">Assertions</span><span class="topic-pill">Navigation</span><span class="topic-pill">Wait mechanisms</span></div></div></div>
+        <div class="module-item"><button class="module-head">Module 4 &mdash; Web Automation</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">Text fields</span><span class="topic-pill">Buttons</span><span class="topic-pill">Checkboxes</span><span class="topic-pill">Radio buttons</span><span class="topic-pill">Dropdowns</span><span class="topic-pill">Links</span><span class="topic-pill">Tables</span><span class="topic-pill">Alerts</span><span class="topic-pill">Frames</span><span class="topic-pill">Windows/Tabs</span><span class="topic-pill">File upload</span><span class="topic-pill">File download</span><span class="topic-pill">Mouse actions</span><span class="topic-pill">Keyboard actions</span></div></div></div>
+        <div class="module-item"><button class="module-head">Module 5 &mdash; Advanced Playwright</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">Auto-waiting</span><span class="topic-pill">Advanced locators</span><span class="topic-pill">Locator strategies</span><span class="topic-pill">Web-first assertions</span><span class="topic-pill">Screenshots</span><span class="topic-pill">Videos</span><span class="topic-pill">Traces</span><span class="topic-pill">Debugging</span><span class="topic-pill">Authentication</span><span class="topic-pill">Cookies</span><span class="topic-pill">Storage state</span><span class="topic-pill">Test data</span></div></div></div>
+        <div class="module-item"><button class="module-head">Module 6 &mdash; Framework Development</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">Pytest</span><span class="topic-pill">Fixtures</span><span class="topic-pill">Page Object Model</span><span class="topic-pill">Base Page</span><span class="topic-pill">Utility classes</span><span class="topic-pill">Configuration</span><span class="topic-pill">Environment management</span><span class="topic-pill">Test data management</span><span class="topic-pill">Logging</span><span class="topic-pill">Reporting</span><span class="topic-pill">Reusable components</span></div></div></div>
+        <div class="module-item"><button class="module-head">Module 7 &mdash; Real-Time Project</button><div class="module-body"><p class="module-body-text">Students build an automation framework from scratch.</p><div class="flow-strip">Requirement &rarr; Test Scenarios &rarr; Test Cases &rarr; Framework &rarr; Automation &rarr; Execution &rarr; Reporting &rarr; CI/CD</div></div></div>
+      </div>
+    </div>
+
+    <!-- Playwright with JavaScript -->
+    <div class="course-panel" id="course-js" data-r>
+      <p class="course-intro">Same overall learning structure as the Python track, teaching JavaScript fundamentals first.</p>
+      <div class="module-acc">
+        <div class="module-item open"><button class="module-head">JavaScript Fundamentals</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">Variables</span><span class="topic-pill">Data Types</span><span class="topic-pill">Operators</span><span class="topic-pill">Conditional Statements</span><span class="topic-pill">Loops</span><span class="topic-pill">Functions</span><span class="topic-pill">Arrays</span><span class="topic-pill">Objects</span><span class="topic-pill">Strings</span><span class="topic-pill">ES6 concepts</span><span class="topic-pill">Destructuring</span><span class="topic-pill">Spread/Rest operators</span><span class="topic-pill">Modules</span><span class="topic-pill">Promises</span><span class="topic-pill">Async/Await</span><span class="topic-pill">Exception handling</span></div></div></div>
+        <div class="module-item"><button class="module-head">Environment Setup</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">Install Node.js</span><span class="topic-pill">Install VS Code</span><span class="topic-pill">Create Node.js project</span><span class="topic-pill">Initialize npm</span><span class="topic-pill">Install Playwright</span><span class="topic-pill">Install browsers</span><span class="topic-pill">Configure Playwright</span><span class="topic-pill">Run first test</span></div></div></div>
+        <div class="module-item"><button class="module-head">Playwright</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">Locators</span><span class="topic-pill">Actions</span><span class="topic-pill">Assertions</span><span class="topic-pill">Browser management</span><span class="topic-pill">Browser Context</span><span class="topic-pill">Pages</span><span class="topic-pill">Navigation</span><span class="topic-pill">Web elements</span><span class="topic-pill">Frames</span><span class="topic-pill">Windows/Tabs</span><span class="topic-pill">File operations</span><span class="topic-pill">Screenshots</span><span class="topic-pill">Traces</span><span class="topic-pill">Debugging</span></div></div></div>
+        <div class="module-item"><button class="module-head">Framework</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">Playwright Test</span><span class="topic-pill">Page Object Model</span><span class="topic-pill">Fixtures</span><span class="topic-pill">Hooks</span><span class="topic-pill">Configuration</span><span class="topic-pill">Test data</span><span class="topic-pill">Utilities</span><span class="topic-pill">Environment configuration</span><span class="topic-pill">Reporting</span><span class="topic-pill">Parallel execution</span></div></div></div>
+        <div class="module-item"><button class="module-head">Real-Time Project</button><div class="module-body"><p class="module-body-text">Build an end-to-end automation framework using Playwright + JavaScript.</p></div></div>
+      </div>
+    </div>
+
+    <!-- Playwright with TypeScript -->
+    <div class="course-panel" id="course-ts" data-r>
+      <p class="course-intro">The advanced, strongly-typed counterpart to the JavaScript track.</p>
+      <div class="module-acc">
+        <div class="module-item open"><button class="module-head">TypeScript Fundamentals</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">TypeScript introduction</span><span class="topic-pill">Type annotations</span><span class="topic-pill">Variables</span><span class="topic-pill">Data Types</span><span class="topic-pill">Arrays</span><span class="topic-pill">Tuples</span><span class="topic-pill">Objects</span><span class="topic-pill">Union Types</span><span class="topic-pill">Functions</span><span class="topic-pill">Optional Parameters</span><span class="topic-pill">Interfaces</span><span class="topic-pill">Classes</span><span class="topic-pill">Access Modifiers</span><span class="topic-pill">Generics</span><span class="topic-pill">Type inference</span><span class="topic-pill">Modules</span></div></div></div>
+        <div class="module-item"><button class="module-head">Environment Setup</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">Install Node.js</span><span class="topic-pill">Install VS Code</span><span class="topic-pill">Create TypeScript project</span><span class="topic-pill">Configure tsconfig.json</span><span class="topic-pill">Install Playwright</span><span class="topic-pill">Configure Playwright</span><span class="topic-pill">Install browsers</span><span class="topic-pill">Execute first test</span></div></div></div>
+        <div class="module-item"><button class="module-head">Playwright with TypeScript</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">Locators</span><span class="topic-pill">Actions</span><span class="topic-pill">Assertions</span><span class="topic-pill">Browser</span><span class="topic-pill">Browser Context</span><span class="topic-pill">Page</span><span class="topic-pill">Frames</span><span class="topic-pill">Multiple tabs</span><span class="topic-pill">File handling</span><span class="topic-pill">Screenshots</span><span class="topic-pill">Traces</span><span class="topic-pill">Debugging</span><span class="topic-pill">Authentication</span></div></div></div>
+        <div class="module-item"><button class="module-head">Framework Development</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">Page Object Model</span><span class="topic-pill">Interfaces</span><span class="topic-pill">Reusable components</span><span class="topic-pill">Fixtures</span><span class="topic-pill">Hooks</span><span class="topic-pill">Configuration</span><span class="topic-pill">Test data</span><span class="topic-pill">Utility classes</span><span class="topic-pill">Environment configuration</span><span class="topic-pill">Reports</span><span class="topic-pill">Parallel execution</span></div></div></div>
+        <div class="module-item"><button class="module-head">Real-Time Project</button><div class="module-body"><p class="module-body-text">Build a maintainable Playwright + TypeScript automation framework from scratch.</p></div></div>
+      </div>
+    </div>
+
+    <!-- API Testing -->
+    <div class="course-panel" id="course-api" data-r>
+      <div class="module-acc">
+        <div class="module-item open"><button class="module-head">API Fundamentals</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">What is API?</span><span class="topic-pill">REST API</span><span class="topic-pill">HTTP methods</span><span class="topic-pill">GET</span><span class="topic-pill">POST</span><span class="topic-pill">PUT</span><span class="topic-pill">PATCH</span><span class="topic-pill">DELETE</span><span class="topic-pill">HTTP status codes</span><span class="topic-pill">Headers</span><span class="topic-pill">Query parameters</span><span class="topic-pill">Path parameters</span><span class="topic-pill">Request body</span><span class="topic-pill">Response body</span><span class="topic-pill">JSON</span></div></div></div>
+        <div class="module-item"><button class="module-head">API Automation</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">API request creation</span><span class="topic-pill">API authentication</span><span class="topic-pill">API response validation</span><span class="topic-pill">Status code validation</span><span class="topic-pill">Headers validation</span><span class="topic-pill">JSON response validation</span><span class="topic-pill">Request chaining</span><span class="topic-pill">API + UI integration</span><span class="topic-pill">Test data creation through API</span><span class="topic-pill">Cleanup through API</span></div></div></div>
+        <div class="module-item"><button class="module-head">Real-Time API Project</button><div class="module-body"><p class="module-body-text">Build API automation and integrate it with the Playwright framework.</p></div></div>
+      </div>
+    </div>
+
+    <!-- CI/CD Integration -->
+    <div class="course-panel" id="course-cicd" data-r>
+      <div class="module-acc">
+        <div class="module-item open"><button class="module-head">Pipeline Concepts</button><div class="module-body"><div class="module-body-in"><span class="topic-pill">What is CI/CD?</span><span class="topic-pill">Why automation needs CI/CD</span><span class="topic-pill">Source control</span><span class="topic-pill">Build</span><span class="topic-pill">Test execution</span><span class="topic-pill">Reports</span><span class="topic-pill">Artifacts</span><span class="topic-pill">Pipeline triggers</span></div></div></div>
+      </div>
+      <div class="tool-badges"><span class="tool-badge">GitHub Actions</span><span class="tool-badge">Jenkins</span><span class="tool-badge">GitLab CI/CD</span><span class="tool-badge">Azure DevOps</span></div>
+      <div class="pipeline-grid">
+        <div class="pipeline-card"><h4>Pipeline 1 &mdash; Basic Test Execution</h4><p>Code &rarr; Build &rarr; Install Dependencies &rarr; Run Tests &rarr; Report</p></div>
+        <div class="pipeline-card"><h4>Pipeline 2 &mdash; Environment-based Execution</h4><p>Code &rarr; Select Environment &rarr; Execute Tests &rarr; Generate Report</p></div>
+        <div class="pipeline-card"><h4>Pipeline 3 &mdash; Scheduled Execution</h4><p>Scheduled Trigger &rarr; Execute Automation &rarr; Report</p></div>
+        <div class="pipeline-card"><h4>Pipeline 4 &mdash; Parallel Execution</h4><p>Trigger &rarr; Multiple Workers &rarr; Parallel Tests &rarr; Consolidated Report</p></div>
+        <div class="pipeline-card" style="grid-column:1/-1"><h4>Pipeline 5 &mdash; CI/CD Release Pipeline</h4><p>Code Commit &rarr; Build &rarr; Automation Tests &rarr; Reports &rarr; Deployment/Release</p></div>
+      </div>
+    </div>
+
+    <!-- AI & LLM-Assisted Automation -->
+    <div class="course-panel" id="course-ai" data-r>
+      <p class="course-intro">Students learn how to use AI models and LLMs for:</p>
+      <div class="ai-topic-grid">
+        <span class="topic-pill">Generate test scenarios</span><span class="topic-pill">Generate test cases</span><span class="topic-pill">Generate automation scripts</span><span class="topic-pill">Generate locators</span><span class="topic-pill">Explain automation errors</span><span class="topic-pill">Debug scripts</span><span class="topic-pill">Convert manual test cases into automation</span><span class="topic-pill">Generate API test cases</span><span class="topic-pill">Generate test data</span><span class="topic-pill">Improve existing scripts</span><span class="topic-pill">Refactor automation code</span><span class="topic-pill">Generate reusable functions</span><span class="topic-pill">Create Page Object classes</span><span class="topic-pill">Understand CI/CD errors</span><span class="topic-pill">Analyze test failures</span>
+      </div>
+      <div class="ai-callout">
+        <div class="eq">Human Tester + Automation Knowledge + AI/LLM = Faster Engineering</div>
+        <p>AI is not positioned to generate an entire automation framework on its own &mdash; it's taught as a force-multiplier for a skilled tester, making the course practical and industry-oriented.</p>
       </div>
     </div>
   </div>
@@ -287,6 +409,25 @@ footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-
   var nav=document.querySelector('nav');
   if(!nav)return;
   window.addEventListener('scroll',function(){nav.classList.toggle('nav-s',window.scrollY>50);},{passive:true});
+})();
+// Course tabs + module accordion
+(function(){
+  var tabs=document.querySelectorAll('.course-tab');
+  var panels=document.querySelectorAll('.course-panel');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.classList.remove('active')});
+      panels.forEach(function(x){x.classList.remove('active')});
+      t.classList.add('active');
+      var panel=document.getElementById('course-'+t.dataset.course);
+      if(panel)panel.classList.add('active');
+    });
+  });
+  document.querySelectorAll('.module-head').forEach(function(h){
+    h.addEventListener('click',function(){
+      h.parentElement.classList.toggle('open');
+    });
+  });
 })();
 // Parallax
 if(window.innerWidth>768){
