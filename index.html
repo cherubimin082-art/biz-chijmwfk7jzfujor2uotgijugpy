@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#07111F">
+<meta name="theme-color" content="#0A0E14">
 <title>SK Automation Academy | Playwright Automation Training with Python, JavaScript &amp; TypeScript</title>
 <meta name="description" content="SK Automation Academy offers hands-on Playwright automation training with Python, JavaScript and TypeScript, API testing, CI/CD integration and AI-assisted automation, led by Selva Kumar, Automation Manager at Capgemini, Chennai.">
 <link rel="canonical" href="https://biz-chijmwfk7jzfujor2uotgijugpy-kappa.vercel.app/">
@@ -24,10 +24,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#07111F;
-  --bg-2:#0B1728;
-  --card:#101F33;
-  --border:#1E3A5F;
+  --bg:#0A0E14;
+  --bg-2:#10151D;
+  --card:#161C26;
+  --border:#2A3441;
   --cta:#2563EB;
   --cyan:#22D3EE;
   --text:#F8FAFC;
@@ -46,13 +46,14 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var
 @media(prefers-reduced-motion:reduce){[data-r]{transition:none;opacity:1;transform:none}}
 /* NAV */
 .nav-s{box-shadow:0 2px 24px rgba(0,0,0,.35)!important;}
-nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(7,17,31,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:62px;transition:box-shadow .3s;gap:16px}
+nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(10,14,20,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:62px;transition:box-shadow .3s;gap:16px}
 .nav-brand{font-weight:800;font-size:.95rem;color:var(--text);text-decoration:none;white-space:nowrap;flex-shrink:0}
 .nav-links{display:none;gap:26px;align-items:center;list-style:none}
 .nav-links a{color:var(--nav-text);text-decoration:none;font-size:.82rem;font-weight:600;letter-spacing:.03em;transition:color .2s}
 .nav-links a:hover{color:var(--cyan)}
 .nav-right{display:flex;align-items:center;gap:10px}
-.nav-cta{background:var(--wa);color:#fff;padding:9px 20px;border-radius:8px;text-decoration:none;font-size:.8rem;font-weight:700;transition:opacity .2s;white-space:nowrap}
+.nav-cta{display:inline-flex;align-items:center;gap:7px;background:var(--wa);color:#fff;padding:9px 20px;border-radius:8px;text-decoration:none;font-size:.8rem;font-weight:700;transition:opacity .2s;white-space:nowrap}
+.nav-cta svg{width:15px;height:15px;fill:#fff;flex-shrink:0}
 .nav-cta:hover{opacity:.88}
 .nav-burger{display:flex;background:none;border:1.5px solid var(--border);color:var(--text);width:38px;height:38px;border-radius:8px;align-items:center;justify-content:center;font-size:1.15rem;cursor:pointer;flex-shrink:0}
 .nav-mobile-menu{display:none;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:var(--bg-2);border-bottom:1px solid var(--border);z-index:899;padding:6px 5vw 14px;box-shadow:0 12px 24px rgba(0,0,0,.3)}
@@ -157,7 +158,9 @@ section{padding:72px 5vw}
 .trainer-line{color:var(--text);font-weight:600;font-size:.88rem}
 .trainer-sub{color:var(--text-2);font-size:.82rem;margin-top:2px}
 .ci-row{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:var(--bg);border-radius:12px;border:1px solid var(--border)}
-.ci-icon{width:40px;height:40px;background:var(--bg-2);border:1px solid var(--border);color:var(--cyan);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.78rem;font-weight:800}
+.ci-icon{width:40px;height:40px;background:var(--bg-2);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-icon svg{width:18px;height:18px;stroke:var(--cyan);fill:none}
+.ci-icon svg.fill{fill:var(--cyan);stroke:none}
 .ci-row h4{font-size:.74rem;color:var(--text-2);font-weight:700;margin-bottom:4px;text-transform:uppercase;letter-spacing:.07em}
 .ci-row a,.ci-row p{color:var(--text);text-decoration:none;font-weight:600;font-size:.9rem}
 .form-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:clamp(22px,4vw,30px)}
@@ -188,7 +191,7 @@ footer{background:var(--bg);color:var(--text-2);padding:32px 5vw;text-align:cent
     <a href="#contact">Contact</a>
   </div>
   <div class="nav-right">
-    <a href="https://wa.me/919620385566?text=Hello!%20I%20found%20SK%20Automation%20Academy%20online%20and%20I'm%20interested%20in%20learning%20more%20about%20your%20Playwright%20automation%20training%20courses.%20Could%20you%20please%20share%20details%20about%20upcoming%20batches%2C%20fees%2C%20and%20course%20duration%3F" class="nav-cta">WhatsApp</a>
+    <a href="https://wa.me/919620385566?text=Hello!%20I%20found%20SK%20Automation%20Academy%20online%20and%20I'm%20interested%20in%20learning%20more%20about%20your%20Playwright%20automation%20training%20courses.%20Could%20you%20please%20share%20details%20about%20upcoming%20batches%2C%20fees%2C%20and%20course%20duration%3F" class="nav-cta"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0z"/></svg>WhatsApp</a>
     <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
   </div>
 </nav>
@@ -395,9 +398,9 @@ footer{background:var(--bg);color:var(--text-2);padding:32px 5vw;text-align:cent
           <div class="trainer-line">Trainer: Selva Kumar</div>
           <div class="trainer-sub">Automation Manager &mdash; Capgemini, Chennai</div>
         </div>
-        <div class="ci-row"><div class="ci-icon">Ph</div><div><h4>Phone</h4><a href="tel:+919620385566">+91 96203 85566</a></div></div>
-        <div class="ci-row"><div class="ci-icon">@</div><div><h4>Email</h4><a href="mailto:skautomationtrainer@gmail.com">skautomationtrainer@gmail.com</a></div></div>
-        <div class="ci-row"><div class="ci-icon">WA</div><div><h4>WhatsApp</h4><a href="https://wa.me/919620385566?text=Hello!%20I%20found%20SK%20Automation%20Academy%20online%20and%20I'm%20interested%20in%20learning%20more%20about%20your%20Playwright%20automation%20training%20courses.%20Could%20you%20please%20share%20details%20about%20upcoming%20batches%2C%20fees%2C%20and%20course%20duration%3F">+91 96203 85566</a></div></div>
+        <div class="ci-row"><div class="ci-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><h4>Phone</h4><a href="tel:+919620385566">+91 96203 85566</a></div></div>
+        <div class="ci-row"><div class="ci-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><h4>Email</h4><a href="mailto:skautomationtrainer@gmail.com">skautomationtrainer@gmail.com</a></div></div>
+        <div class="ci-row"><div class="ci-icon"><svg class="fill" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0z"/></svg></div><div><h4>WhatsApp</h4><a href="https://wa.me/919620385566?text=Hello!%20I%20found%20SK%20Automation%20Academy%20online%20and%20I'm%20interested%20in%20learning%20more%20about%20your%20Playwright%20automation%20training%20courses.%20Could%20you%20please%20share%20details%20about%20upcoming%20batches%2C%20fees%2C%20and%20course%20duration%3F">+91 96203 85566</a></div></div>
       </div>
       <div class="form-card" data-r data-d="2">
         <form id="enquiryForm">
