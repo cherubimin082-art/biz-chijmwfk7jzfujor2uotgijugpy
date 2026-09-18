@@ -67,6 +67,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(238,242,246,
   .nav-burger{display:none}
   .nav-mobile-menu{display:none!important}
 }
+@media(max-width:400px){
+  nav{padding:0 12px;gap:8px}
+  .nav-brand{flex-shrink:1;min-width:0;max-width:112px;overflow:hidden;text-overflow:ellipsis;font-size:.82rem}
+  .nav-right{gap:6px}
+  .nav-cta{padding:8px 12px;font-size:.72rem;gap:5px}
+  .nav-cta svg{width:13px;height:13px}
+  .nav-burger{flex-shrink:0}
+}
 /* HERO */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:radial-gradient(ellipse 80% 60% at 50% 0%,var(--bg-2) 0%,var(--bg) 65%)}
 .hero-inner{position:relative;z-index:2;padding:110px 24px 60px;max-width:720px}
@@ -191,11 +199,12 @@ section{padding:72px 5vw}
 .trainer-line{color:var(--text);font-weight:600;font-size:.88rem}
 .trainer-sub{color:var(--text-2);font-size:.82rem;margin-top:2px}
 .ci-row{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:var(--bg);border-radius:12px;border:1px solid var(--border)}
+.ci-row>div:last-child{min-width:0}
 .ci-icon{width:40px;height:40px;background:var(--bg-2);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .ci-icon svg{width:18px;height:18px;stroke:var(--cyan-text);fill:none}
 .ci-icon svg.fill{fill:var(--cyan-text);stroke:none}
 .ci-row h4{font-size:.74rem;color:var(--text-2);font-weight:700;margin-bottom:4px;text-transform:uppercase;letter-spacing:.07em}
-.ci-row a,.ci-row p{color:var(--text);text-decoration:none;font-weight:600;font-size:.9rem}
+.ci-row a,.ci-row p{color:var(--text);text-decoration:none;font-weight:600;font-size:.9rem;overflow-wrap:break-word;word-break:break-word}
 .form-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:clamp(22px,4vw,30px)}
 .field{margin-bottom:16px}
 .field label{display:block;font-size:.74rem;font-weight:700;color:var(--text-2);margin-bottom:7px;text-transform:uppercase;letter-spacing:.05em}
