@@ -68,12 +68,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(238,242,246,
   .nav-mobile-menu{display:none!important}
 }
 @media(max-width:400px){
-  nav{padding:0 12px;gap:8px}
-  .nav-brand{flex-shrink:1;min-width:0;max-width:112px;overflow:hidden;text-overflow:ellipsis;font-size:.82rem}
+  nav{padding:0 10px;gap:6px}
+  .nav-brand{flex-shrink:1;min-width:0;font-size:.8rem;white-space:nowrap}
   .nav-right{gap:6px}
-  .nav-cta{padding:8px 12px;font-size:.72rem;gap:5px}
-  .nav-cta svg{width:13px;height:13px}
+  .nav-cta{width:38px;height:38px;padding:0;justify-content:center;border-radius:50%;flex-shrink:0}
+  .nav-cta-label{display:none}
+  .nav-cta svg{width:17px;height:17px}
   .nav-burger{flex-shrink:0}
+}
+@media(max-width:340px){
+  .nav-brand{font-size:.72rem}
 }
 /* HERO */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:radial-gradient(ellipse 80% 60% at 50% 0%,var(--bg-2) 0%,var(--bg) 65%)}
@@ -233,7 +237,7 @@ footer{background:var(--bg);color:var(--text-2);padding:32px 5vw;text-align:cent
     <a href="#contact">Contact</a>
   </div>
   <div class="nav-right">
-    <a href="https://wa.me/919620385566?text=Hello!%20I%20found%20SK%20Automation%20Academy%20online%20and%20I'm%20interested%20in%20learning%20more%20about%20your%20Playwright%20automation%20training%20courses.%20Could%20you%20please%20share%20details%20about%20upcoming%20batches%2C%20fees%2C%20and%20course%20duration%3F" class="nav-cta"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0z"/></svg>WhatsApp</a>
+    <a href="https://wa.me/919620385566?text=Hello!%20I%20found%20SK%20Automation%20Academy%20online%20and%20I'm%20interested%20in%20learning%20more%20about%20your%20Playwright%20automation%20training%20courses.%20Could%20you%20please%20share%20details%20about%20upcoming%20batches%2C%20fees%2C%20and%20course%20duration%3F" class="nav-cta"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0012.05 0z"/></svg><span class="nav-cta-label">WhatsApp</span></a>
     <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
   </div>
 </nav>
