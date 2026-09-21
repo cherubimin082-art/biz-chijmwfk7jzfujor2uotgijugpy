@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://biz-chijmwfk7jzfujor2uotgijugpy-kappa.vercel.app/sitemap.xml
