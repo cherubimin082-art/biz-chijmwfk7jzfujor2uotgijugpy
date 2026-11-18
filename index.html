@@ -193,6 +193,31 @@ section{padding:72px 5vw}
 .mode-badge{background:var(--cta);color:#fff;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:4px 10px;border-radius:50px;display:inline-block;justify-self:start}
 .fee-amt{font-weight:800;color:var(--cyan-text);font-size:1rem;justify-self:end}
 @media(max-width:520px){.fees-row{grid-template-columns:1fr;text-align:left;gap:6px}.fee-amt,.mode-badge{justify-self:start}}
+/* PRICING COMPARISON */
+.price-table{max-width:820px;margin:36px auto 0;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.price-row{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.price-row:last-child{border-bottom:none}
+.price-row.price-head{background:var(--bg-2);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-2)}
+.price-course{flex:1 1 170px;font-weight:700;color:var(--text);font-size:.88rem}
+.price-row.price-head .price-course{font-weight:700}
+.price-course-only{width:88px;text-align:right;font-weight:700;color:var(--text-2);font-size:.88rem}
+.price-premium-col{width:112px;display:flex;flex-direction:column;align-items:flex-end;gap:3px}
+.price-premium-amt{font-weight:800;color:var(--cyan-text);font-size:.98rem}
+.premium-badge{background:var(--cta);color:#fff;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 9px;border-radius:50px}
+.price-wa-btn{width:32px;height:32px;border-radius:50%;background:#25D366;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .15s}
+.price-wa-btn:hover{transform:scale(1.08)}
+.price-wa-btn svg{width:17px;height:17px;fill:#fff}
+.price-note{max-width:820px;margin:18px auto 0;text-align:center;font-size:.8rem;color:var(--text-2)}
+@media(max-width:560px){.price-row{padding:14px 16px;gap:10px}.price-course{flex:1 1 100%}.price-course-only{width:auto;text-align:left}.price-premium-col{width:auto;align-items:flex-start}}
+/* FEATURE COMPARISON */
+.feat-table{max-width:720px;margin:28px auto 0;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.feat-row{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;padding:14px 20px;border-bottom:1px solid var(--border);align-items:center}
+.feat-row:last-child{border-bottom:none}
+.feat-row.feat-head{background:var(--bg-2);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-2)}
+.feat-row span:first-child{font-weight:600;color:var(--text);font-size:.86rem}
+.feat-check{justify-self:center;color:var(--cyan-text);font-weight:800;font-size:1rem}
+.feat-dash{justify-self:center;color:var(--text-2);font-weight:700}
+@media(max-width:520px){.feat-row{grid-template-columns:1.6fr 1fr 1fr;padding:12px 14px;gap:6px}.feat-row span:first-child{font-size:.78rem}}
 /* CAREER / C2P */
 .career-bg{background:var(--bg-2)}
 .career-h3{font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:22px;text-align:center}
@@ -513,17 +538,60 @@ footer{background:var(--bg);color:var(--text-2);padding:32px 5vw;text-align:cent
       <div class="sec-center">
         <p class="sec-eyebrow">Pricing</p>
         <h2 class="sec-h2">Course Fees</h2>
-        <p class="sec-sub">Clear, upfront pricing for every track</p>
+        <p class="sec-sub">Choose Course Only, or go with the Premium Career Package for complete interview &amp; placement support</p>
       </div>
-      <div class="fees-table">
-        <div class="fees-row fees-head"><span>Course</span><span>Class Mode</span><span>Fee</span></div>
-        <div class="fees-row"><span>Playwright with Python</span><span class="mode-badge">Online</span><span class="fee-amt">&#8377;13,500</span></div>
-        <div class="fees-row"><span>Playwright with JavaScript</span><span class="mode-badge">Online</span><span class="fee-amt">&#8377;13,500</span></div>
-        <div class="fees-row"><span>Playwright with TypeScript</span><span class="mode-badge">Online</span><span class="fee-amt">&#8377;13,500</span></div>
-        <div class="fees-row"><span>Playwright JavaScript + TypeScript Bundle</span><span class="mode-badge">Online</span><span class="fee-amt">&#8377;17,500</span></div>
+      <div class="price-table">
+        <div class="price-row price-head"><span class="price-course">Course</span><span class="price-course-only">Course Only</span><span class="price-premium-col">Premium</span><span style="width:32px"></span></div>
+        <div class="price-row">
+          <span class="price-course">Playwright with Python</span>
+          <span class="price-course-only">&#8377;11,000</span>
+          <span class="price-premium-col"><span class="premium-badge">Premium</span><span class="price-premium-amt">&#8377;13,500</span></span>
+          <a class="price-wa-btn" aria-label="Enquire on WhatsApp about Playwright with Python" href="https://wa.me/919620385566?text=Hello!%20I'm%20interested%20in%20the%20Playwright%20with%20Python%20course%20at%20SK%20Automation%20Academy.%20Could%20you%20share%20details%20about%20the%20Course%20Only%20and%20Premium%20Career%20Package%20options%3F"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.26.86 5.82 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.55 3.7-8.25 8.26-8.25m-4.52 4.71c-.17 0-.44.06-.67.31s-.88.86-.88 2.09.9 2.42 1.03 2.59 1.77 2.84 4.38 3.86c2.17.86 2.6.69 3.08.65s1.52-.62 1.73-1.22.21-1.11.15-1.22-.25-.17-.52-.3-1.6-.79-1.85-.88-.43-.13-.61.13-.7.88-.86 1.06-.32.2-.59.07a7.35 7.35 0 0 1-2.16-1.33 8.1 8.1 0 0 1-1.5-1.86c-.16-.27-.02-.42.12-.55s.27-.32.4-.48.17-.27.26-.46.04-.35-.02-.48-.6-1.47-.83-2.01-.44-.46-.61-.47-.34-.01-.52-.01"/></svg></a>
+        </div>
+        <div class="price-row">
+          <span class="price-course">Playwright with JavaScript</span>
+          <span class="price-course-only">&#8377;11,000</span>
+          <span class="price-premium-col"><span class="premium-badge">Premium</span><span class="price-premium-amt">&#8377;13,500</span></span>
+          <a class="price-wa-btn" aria-label="Enquire on WhatsApp about Playwright with JavaScript" href="https://wa.me/919620385566?text=Hello!%20I'm%20interested%20in%20the%20Playwright%20with%20JavaScript%20course%20at%20SK%20Automation%20Academy.%20Could%20you%20share%20details%20about%20the%20Course%20Only%20and%20Premium%20Career%20Package%20options%3F"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.26.86 5.82 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.55 3.7-8.25 8.26-8.25m-4.52 4.71c-.17 0-.44.06-.67.31s-.88.86-.88 2.09.9 2.42 1.03 2.59 1.77 2.84 4.38 3.86c2.17.86 2.6.69 3.08.65s1.52-.62 1.73-1.22.21-1.11.15-1.22-.25-.17-.52-.3-1.6-.79-1.85-.88-.43-.13-.61.13-.7.88-.86 1.06-.32.2-.59.07a7.35 7.35 0 0 1-2.16-1.33 8.1 8.1 0 0 1-1.5-1.86c-.16-.27-.02-.42.12-.55s.27-.32.4-.48.17-.27.26-.46.04-.35-.02-.48-.6-1.47-.83-2.01-.44-.46-.61-.47-.34-.01-.52-.01"/></svg></a>
+        </div>
+        <div class="price-row">
+          <span class="price-course">Playwright with TypeScript</span>
+          <span class="price-course-only">&#8377;11,000</span>
+          <span class="price-premium-col"><span class="premium-badge">Premium</span><span class="price-premium-amt">&#8377;13,500</span></span>
+          <a class="price-wa-btn" aria-label="Enquire on WhatsApp about Playwright with TypeScript" href="https://wa.me/919620385566?text=Hello!%20I'm%20interested%20in%20the%20Playwright%20with%20TypeScript%20course%20at%20SK%20Automation%20Academy.%20Could%20you%20share%20details%20about%20the%20Course%20Only%20and%20Premium%20Career%20Package%20options%3F"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.26.86 5.82 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.55 3.7-8.25 8.26-8.25m-4.52 4.71c-.17 0-.44.06-.67.31s-.88.86-.88 2.09.9 2.42 1.03 2.59 1.77 2.84 4.38 3.86c2.17.86 2.6.69 3.08.65s1.52-.62 1.73-1.22.21-1.11.15-1.22-.25-.17-.52-.3-1.6-.79-1.85-.88-.43-.13-.61.13-.7.88-.86 1.06-.32.2-.59.07a7.35 7.35 0 0 1-2.16-1.33 8.1 8.1 0 0 1-1.5-1.86c-.16-.27-.02-.42.12-.55s.27-.32.4-.48.17-.27.26-.46.04-.35-.02-.48-.6-1.47-.83-2.01-.44-.46-.61-.47-.34-.01-.52-.01"/></svg></a>
+        </div>
+        <div class="price-row">
+          <span class="price-course">Playwright + Robot Framework</span>
+          <span class="price-course-only">&#8377;10,000</span>
+          <span class="price-premium-col"><span class="premium-badge">Premium</span><span class="price-premium-amt">&#8377;12,500</span></span>
+          <a class="price-wa-btn" aria-label="Enquire on WhatsApp about Playwright + Robot Framework" href="https://wa.me/919620385566?text=Hello!%20I'm%20interested%20in%20the%20Playwright%20%2B%20Robot%20Framework%20course%20at%20SK%20Automation%20Academy.%20Could%20you%20share%20details%20about%20the%20Course%20Only%20and%20Premium%20Career%20Package%20options%3F"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.26.86 5.82 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.55 3.7-8.25 8.26-8.25m-4.52 4.71c-.17 0-.44.06-.67.31s-.88.86-.88 2.09.9 2.42 1.03 2.59 1.77 2.84 4.38 3.86c2.17.86 2.6.69 3.08.65s1.52-.62 1.73-1.22.21-1.11.15-1.22-.25-.17-.52-.3-1.6-.79-1.85-.88-.43-.13-.61.13-.7.88-.86 1.06-.32.2-.59.07a7.35 7.35 0 0 1-2.16-1.33 8.1 8.1 0 0 1-1.5-1.86c-.16-.27-.02-.42.12-.55s.27-.32.4-.48.17-.27.26-.46.04-.35-.02-.48-.6-1.47-.83-2.01-.44-.46-.61-.47-.34-.01-.52-.01"/></svg></a>
+        </div>
+        <div class="price-row">
+          <span class="price-course">Playwright JavaScript + TypeScript Bundle</span>
+          <span class="price-course-only">&mdash;</span>
+          <span class="price-premium-col"><span class="premium-badge">Premium</span><span class="price-premium-amt">&#8377;17,500</span></span>
+          <a class="price-wa-btn" aria-label="Enquire on WhatsApp about JavaScript + TypeScript Bundle" href="https://wa.me/919620385566?text=Hello!%20I'm%20interested%20in%20the%20Playwright%20JavaScript%20%2B%20TypeScript%20Bundle%20course%20at%20SK%20Automation%20Academy.%20Could%20you%20share%20more%20details%3F"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.26.86 5.82 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.55 3.7-8.25 8.26-8.25m-4.52 4.71c-.17 0-.44.06-.67.31s-.88.86-.88 2.09.9 2.42 1.03 2.59 1.77 2.84 4.38 3.86c2.17.86 2.6.69 3.08.65s1.52-.62 1.73-1.22.21-1.11.15-1.22-.25-.17-.52-.3-1.6-.79-1.85-.88-.43-.13-.61.13-.7.88-.86 1.06-.32.2-.59.07a7.35 7.35 0 0 1-2.16-1.33 8.1 8.1 0 0 1-1.5-1.86c-.16-.27-.02-.42.12-.55s.27-.32.4-.48.17-.27.26-.46.04-.35-.02-.48-.6-1.47-.83-2.01-.44-.46-.61-.47-.34-.01-.52-.01"/></svg></a>
+        </div>
       </div>
-      <p class="course-intro" style="margin-top:16px">Learn both JavaScript and TypeScript Playwright automation in one bundled program.</p>
-      <div style="text-align:center;margin-top:8px">
+      <p class="price-note">Learn both JavaScript and TypeScript Playwright automation in one bundled program.</p>
+
+      <div class="sec-center" style="margin-top:48px;margin-bottom:0">
+        <p class="sec-eyebrow">Compare</p>
+        <h2 class="sec-h2">What's Included</h2>
+      </div>
+      <div class="feat-table">
+        <div class="feat-row feat-head"><span>Feature</span><span style="justify-self:center">Course Only</span><span style="justify-self:center">Premium</span></div>
+        <div class="feat-row"><span>Live training</span><span class="feat-check">&#10003;</span><span class="feat-check">&#10003;</span></div>
+        <div class="feat-row"><span>Hands-on projects</span><span class="feat-check">&#10003;</span><span class="feat-check">&#10003;</span></div>
+        <div class="feat-row"><span>Framework development</span><span class="feat-check">&#10003;</span><span class="feat-check">&#10003;</span></div>
+        <div class="feat-row"><span>AI tools integration</span><span class="feat-check">&#10003;</span><span class="feat-check">&#10003;</span></div>
+        <div class="feat-row"><span>Interview questions</span><span class="feat-dash">&mdash;</span><span class="feat-check">&#10003;</span></div>
+        <div class="feat-row"><span>Interview preparation</span><span class="feat-dash">&mdash;</span><span class="feat-check">&#10003;</span></div>
+        <div class="feat-row"><span>Mock interview guidance</span><span class="feat-dash">&mdash;</span><span class="feat-check">&#10003;</span></div>
+        <div class="feat-row"><span>ATS resume assistance</span><span class="feat-dash">&mdash;</span><span class="feat-check">&#10003;</span></div>
+      </div>
+
+      <div style="text-align:center;margin-top:28px">
         <p class="course-intro" style="margin-bottom:18px">For more details, call or send an enquiry.</p>
         <a href="#contact" class="btn-p" style="display:inline-flex">Enquire Now</a>
       </div>
